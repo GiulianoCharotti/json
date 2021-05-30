@@ -34,33 +34,5 @@ function print_html() {
         localStorage.setItem('name_storage', get_data()[0].name);
         localStorage.setItem('price_storage', get_data()[0].price);
     }
-    // // select your div
-    // const div_inventory_selector = document.querySelector('.inventory');
-    // // to not redraw DOM every time
-    // const docFragment = document.createDocumentFragment();
-    // // create a div elem
-    // const divElement = document.createElement('div');
-
-    // // assign a class to it
-    // // divElement.setAttribute('class', 'your-desired-class'); 
-
-    // // create a p elem
-    // const paragraphElement = document.createElement('p');
-
-    // // assing a class to it
-    // // paragraphElement.setAttribute('class', 'your-another-class'); 
-
-    // // add text to p elem
-    // paragraphElement.innerHTML = type_of_product();
-
-
-    // // append div elem to your fragment
-    // docFragment.appendChild(divElement);
-    // // append p elem to div elem
-    // divElement.appendChild(paragraphElement);
-    // // this appends the elem on your DOM
-    // div_inventory_selector.appendChild(docFragment);
-
-
 
 }
