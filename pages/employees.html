@@ -90,7 +90,7 @@
 
     <main>
         <div>
-            <h1>Inventario</h1>
+            <h1></h1>
             <h3>Enter new inventory </h3>
             <form>
                 <label for="type_product">Choose a type of product:</label>
@@ -102,18 +102,25 @@
                     <option value="phones">Phones</option>
                     <option value="others">Others</option>
                 </select>
-
+                <br>
                 <label for="id_product">ID: </label>
-                <input type="number" id="p_id" name="p_id">
+                <input type="number" id="p_id" name="p_id" class="input_data"><br>
+
                 <label for="name_product">Name</label>
-                <input type="text" id="p_name" name="p_name">
+                <input type="text" id="p_name" name="p_name" class="input_data"><br>
+
                 <label for="price_product">Price: $</label>
-                <input type="number" id="p_price" name="p_price">
+                <input type="number" id="p_price" name="p_price" class="input_data">
 
             </form>
-            <input type="submit" value="Submit" onclick="create_inputs()">
+            <input type="submit" value="Submit" onclick="print_html()">
+        </div>
 
-
+        <div>
+            <h3>Inventory</h3>
+            <div id="inventory" class="inventory">
+                <div></div>
+            </div>
         </div>
     </main>
 
