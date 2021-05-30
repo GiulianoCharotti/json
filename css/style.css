@@ -1,0 +1,23 @@
+.navbar-brand {
+  margin-left: 1rem;
+}
+.navbar-brand #menu_logo {
+  width: 64px;
+  margin-right: 1rem;
+}
+
+.nav-item .employees {
+  color: red;
+}
+
+.carousel-inner {
+  width: 100%;
+  height: 360px;
+}
+.carousel-inner .carousel-item img {
+  width: 100%;
+  height: 360px;
+  object-fit: contain;
+}
+
+/*# sourceMappingURL=style.css.map */
