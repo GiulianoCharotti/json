@@ -36,3 +36,7 @@ function print_html() {
     }
 
 }
+
+let jsonData = JSON.stringify(get_data());
+localStorage.setItem('jsonData', jsonData);
+console.log( localStorage.getItem('jsonData'));
