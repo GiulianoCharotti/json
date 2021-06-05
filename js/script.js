@@ -5,19 +5,28 @@ function type_of_product() {
 }
 
 function get_data() {
-    var inventory_data = [];
+    // var inventory_data = [];
     var p_id = document.getElementById('p_id').value;
     var p_name = document.getElementById('p_name').value;
     var p_price = document.getElementById('p_price').value;
 
 
-    const add_data = {
-        id: p_id,
-        name: p_name,
-        price: p_price
-    }
-    inventory_data.push(add_data);
-    return inventory_data;
+    // const add_data = {
+    //     id: p_id,
+    //     name: p_name,
+    //     price: p_price
+    // }
+
+    class add_data {
+        constructor (id, name,price) {
+          this.id = p_id;
+          this.name = p_name;
+          this.price = p_price;
+
+    }};
+    console.log(add_data);
+    // inventory_data.push(add_data);
+    return add_data;
 }
 
 function print_html() {
