@@ -17,35 +17,35 @@ function get_data() {
     //     price: p_price
     // }
 
-    class add_data {
+    class Add_data {
         constructor (id, name,price) {
           this.id = p_id;
           this.name = p_name;
           this.price = p_price;
-
     }};
-    console.log(add_data);
-    // inventory_data.push(add_data);
-    return add_data;
+    const data_const = new Add_data();
+    console.log(data_const);
+    return data_const;
+
 }
 
 function print_html() {
-    for (const data of get_data()) {
+    for (const data of Object.keys(get_data())) {
         const contenedor = document.createElement('div');
-        contenedor.innerHTML = `<h4>ID: ${get_data()[0].id} </h4>
+        contenedor.innerHTML = `<h4>ID: ${get_data().id} </h4>
         
-                                <h4>Name: ${get_data()[0].name} </h4>
+                                <h4>Name: ${get_data().name} </h4>
 
-                                <h4>Price: ${get_data()[0].price} </h4>`;
+                                <h4>Price: ${get_data().price} </h4>`;
 
         document.body.appendChild(contenedor);
-        localStorage.setItem('id_storage', get_data()[0].id);
-        localStorage.setItem('name_storage', get_data()[0].name);
-        localStorage.setItem('price_storage', get_data()[0].price);
+        localStorage.setItem('id_storage', get_data().id);
+        localStorage.setItem('name_storage', get_data().name);
+        localStorage.setItem('price_storage', get_data().price);
     }
 
 }
 
-let jsonData = JSON.stringify(get_data());
-localStorage.setItem('jsonData', jsonData);
-console.log( localStorage.getItem('jsonData'));
+// let jsonData = JSON.stringify(get_data());
+// localStorage.setItem('jsonData', jsonData);
+// console.log( localStorage.getItem('jsonData'));
