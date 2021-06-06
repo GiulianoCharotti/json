@@ -1,3 +1,4 @@
+
 function type_of_product() {
     var type_product = document.getElementById('type_product');
     var text_type = type_product.options[type_product.selectedIndex].text;
@@ -5,47 +6,32 @@ function type_of_product() {
 }
 
 function get_data() {
-    // var inventory_data = [];
+    var elements = document.getElementById("form_products").elements;
+    
+
     var p_id = document.getElementById('p_id').value;
     var p_name = document.getElementById('p_name').value;
     var p_price = document.getElementById('p_price').value;
-
-
-    // const add_data = {
-    //     id: p_id,
-    //     name: p_name,
-    //     price: p_price
-    // }
-
     class Add_data {
-        constructor (id, name,price) {
-          this.id = p_id;
-          this.name = p_name;
-          this.price = p_price;
-    }};
+        constructor() {
+            this.id = p_id;
+            this.name = p_name;
+            this.price = p_price;
+        }
+    };
     const data_const = new Add_data();
-    console.log(data_const);
     return data_const;
-
 }
-
 function print_html() {
-    for (const data of Object.keys(get_data())) {
+    for (const [key, value] of Object.entries(get_data())) {
         const contenedor = document.createElement('div');
-        contenedor.innerHTML = `<h4>ID: ${get_data().id} </h4>
-        
-                                <h4>Name: ${get_data().name} </h4>
-
-                                <h4>Price: ${get_data().price} </h4>`;
-
+        contenedor.innerHTML = `${key}: ${value}`;
         document.body.appendChild(contenedor);
-        localStorage.setItem('id_storage', get_data().id);
-        localStorage.setItem('name_storage', get_data().name);
-        localStorage.setItem('price_storage', get_data().price);
+        localStorage.setItem(`${key}`,  `${value}`);
+
     }
 
 }
-
-// let jsonData = JSON.stringify(get_data());
-// localStorage.setItem('jsonData', jsonData);
-// console.log( localStorage.getItem('jsonData'));
+let jsonData = JSON.stringify(get_data());
+localStorage.setItem('jsonData', jsonData);
+console.log( localStorage.getItem('jsonData'));
