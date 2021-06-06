@@ -41,5 +41,6 @@ $("#form_products").on({
         title.appendChild(contenedor);
     },
     mouseleave: function () {
+        $( "#container" ).remove();
     }
 });
